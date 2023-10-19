@@ -13,7 +13,7 @@ require_once ("helpers/url.php");
 <body>
     <header>
         <a href="<?=$BASE_URL ?>"id="logo">
-            <img src="<?=$BASE_URL ?>/img.logo.svg" alt="Logo Blog">
+            <img src="<?=$BASE_URL ?>/img/logo.svg" alt="Logo Blog">
         </a>
         <ul id="navbar">
             <li><a href="<?=$BASE_URL ?>" class="nav-link">Home</a></li>
