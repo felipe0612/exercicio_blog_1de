@@ -51,3 +51,4 @@ print_r($posts); -->
 // Inclusão do footer
 require_once("templates/footer.php");
 ?>
+
