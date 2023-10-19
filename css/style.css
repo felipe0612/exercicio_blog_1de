@@ -64,7 +64,8 @@ footer {
     padding: 50px 0;
 }
 
-/* Home */
+/* ________________________ */
+/* HOME */
 
 #title-container {
     min-width: 500px;
@@ -91,6 +92,16 @@ footer {
     flex-wrap: wrap;
 }
 
+.post-box:first-child {
+    min-width: 100%;
+}
+
+.post-box {
+    flex: 1 1 0;
+    margin: 0 1%;
+    margin-bottom: 20px;
+}
+
 .post-box .post-title {
     font-size: 24px;
     margin: 10px 0;
@@ -101,11 +112,11 @@ footer {
     transition: .5s;
 }
 
-.post-box .post-title a:hover {
+.post-box .post-title a:houver {
     color: #999;
 }
 
-.post-box .post-descrption {
+.post-box .post-description {
     color: #666;
 }
 
@@ -113,94 +124,152 @@ footer {
     width: 100%;
 }
 
-.tags-conatiner {
+.tags-container {
     margin-top: 10px;
 }
 
-.tags-conatiner a {
+.tags-container a {
     font-size: 14px;
     color: #333;
     display: inline-block;
     margin-right: 5px;
 }
 
+/* ______________ */
+/* POST (detalhe) */
+
 #post-container {
-    max-width: 1200px;
-    margin-bottom: 250px;
     display: grid;
     grid-template-columns: 75% 25%;
     grid-template-rows: auto;
     grid-template-areas: "main sidebar";
     grid-gap: 10px;
     padding-top: 30px;
+    max-width: 1200px;
     margin: 0 auto;
-  }
-  
-  .content-container {
-    grid-area: main;
-  }
-  
-  #post-description {
+    margin-bottom: 250px;
+}
+
+    .content-container {
+        grid-area: main;
+}
+
+#post-description {
     font-style: italic;
     margin-bottom: 40px;
-  }
-  
-  .post-content {
+}
+
+.post-content {
     line-height: 1.8;
     margin: 10px 0;
-  }
-  
-  /* POST SIDEBAR */
-  .nav-container {
+}
+
+/* POST SIDEBAR */
+.nav-container {
     grid-area: sidebar;
-  }
-  
-  #main-title {
+}
+
+#main-title {
     font-size: 36px;
     margin-bottom: 30px;
-  }
-  
-  .img-container {
+}
+
+.img-container {
     margin-bottom: 30px;
-  }
-  
-  .img-container img {
+}
+
+.img-container img {
     width: 60%;
-  }
-  
-  #tags-title, #categories-title {
+}
+
+/* POST ASIDE */
+#tags-title, #categories-title {
     font-size: 24px;
     margin-bottom: 10px;
     background-color: #000;
     text-align: center;
-    color: #FFF;
+    color: #fff;
     padding: 10px;
     font-weight: 300;
-  }
-  
-  #tag-list, #categories-list {
+}
+
+#tag-list, #categories-list {
     list-style: none;
-  }
-  
-  #tag-list li, #categories-list li {
+}
+
+#tag-list li, #categories-list li {
     margin-bottom: 10px;
-  }
-  
-  #tag-list a, #categories-list a {
+}
+
+#tag-lisr a, #categories-list a {
     color: #666;
     transition: .5s;
-  }
-  
-  #tag-list a:hover, #categories-list a:hover {
-    color: #000;
-  }
+}
 
-  footer{
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    text-align: center;
-    background: #000;
-    color: #FFF;
-    padding: 50px 0;
-  }
+#tag-lisr a:houver, #categories-list a:houver {
+    color: #000;
+}
+
+/* __________________ */
+/* FOOTER */
+
+    footer {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        text-align: center;
+        background: #000;
+        color: #FFF;
+        padding: 50px 0;
+    }
+
+/* ____________________ */
+/* RESPOSIVIDADE */
+
+@media(max-width: 576px) {
+
+    /* HOME */
+    header {
+        width: 100%;
+    }
+
+    #logo {
+        display: block;
+        width: 50px;
+        position: relative;
+        margin: 0 auto;
+        left: 0;
+    }
+
+    #navbar {
+        display: none;
+    }
+
+    #title-container {
+        min-width: 100%;
+        margin-top: 20px;
+    }
+
+    #posts-container {
+        margin-top: 20px;
+    }
+
+    .post-box {
+        flex: 100% 1 0 ;
+        padding: 15px;
+        margin: 0;
+    }
+
+    /* POST */
+    #post-container {
+        grid-template-columns: 100%;
+        padding: 15px;
+        grid-template-areas: 
+        "main"
+        "sidebar";
+    }
+
+    .img-container img {
+        width: 100%;
+    }
+}
